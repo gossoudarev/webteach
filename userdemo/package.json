@@ -1,0 +1,14 @@
+{
+  "name": "userdemo",
+  "version": "1.0.0",
+  "description": "a demo project with modularity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "modular"
+  ],
+  "author": "Goss",
+  "license": "ISC"
+}
