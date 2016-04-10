@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><style>input {font-size:150%}</style>
+  <title>HTML5 JQuery JSON MD5</title><meta charset="utf-8">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+     $(function(){
+       $("div").html("<h1>Вводите текст в поле и наблюдайте!</h1><p><input /></p>");
+       $("h1").css({"font-family":"monospace"});
+       $("input").on("keyup",function(){
+         $.get("/stas", 
+                {"src" : $(this).val()}
+                , function(result){
+           			$("h1").html("md5: " + result.md5);
+         		})
+       }) 
+     })
+  </script>
+ </head>
+ <body>
+   <div></div>
+   <h4>Это пример взаимодействия jQuery, JSON и PHP (см. <a target="_blank" href="/lr/md5/">демо</a>)</h4>
+   <h4>Откройте инструменты разработчика, вкладку Сеть (Network) и наблюдайте запросы по мере ввода текста</h4>
+
+ </body>
+</html>
