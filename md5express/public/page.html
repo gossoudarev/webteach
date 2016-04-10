@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><style>input {font-size:150%} * {zoom: 120%}</style>
+  <title>HTML5 JQuery JSON MD5</title><meta charset="utf-8">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+     //added 19-03-2016 ===
+  	 var mths = ["get", "post", "put"], lst = $("<select>");
+	 $(mths).each(function(i){
+		 lst.append( $("<option>", {text: mths[i]}  )  );
+	 });
+	 //====================
+     $(function(){
+       $("div").html("<h1>Вводите текст в поле и наблюдайте!</h1><p><input /></p>");
+	   $("div").append(lst);
+       $("h1").css({"font-family":"monospace"});
+       $("input").on("keyup",function(){
+		   
+		   $.ajax({
+		     url: "/stas/",
+		     data: { src: $(this).val()},
+			 method: lst.val(), 
+		   })
+		     .done(function( result ) {
+				 console.log(result);
+				 $("h1").html("md5: " + result.md5);
+		     });
+		   
+
+       }) 
+     })
+  </script>
+ </head>
+ <body>
+   <div></div>
+ </body>
+ <!--
+	 часть node-приложения md5 в стилистике QUERY_STRING
+	 (без маршрутов с динамической частью)
+	 -->
+</html>
