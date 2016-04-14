@@ -39,7 +39,7 @@ var serv = function (req, res){
         break; 
    default:
         res.writeHead(200, {"Content-Type": "text/html"});
-        fs.readFile("form.html", function(err, what){
+        fs.readFile("./public/form.html", function(err, what){
           if (err) throw err;
           res.write(what);
           res.end();
