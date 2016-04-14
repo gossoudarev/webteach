@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Chat Form</title>
+   <meta charset="utf-8"><style>* {font-family:sans-serif} span {position:fixed; right:20px; top:10px;border:double; padding: 15px; border-radius:20px;}</style>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+     $(function(){
+       var inter = setInterval(function(){    
+			$.get("/get", function(result){
+           		$("div").html(result);
+         	})       
+       }, 1000); 
+       $("#b").on("click", function(){
+       		 
+            $.get("/add", {"what" : $("#i").val()}, function(result){
+              $("input").css({"background":"green"});
+              setTimeout(function(){  $("input").css({"background":"none"});  }, 3000);
+         	})
+       });
+     })
+  </script>
+ </head>
+ <body>
+    <h1>Содержимое чата:</h1>
+    <div></div>
+    <span><h2>Введите реплику:</h2>
+      <input id="i"><button id="b">Написать!</button></span>
+ </body>
+</html>
