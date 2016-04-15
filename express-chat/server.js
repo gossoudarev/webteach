@@ -1,6 +1,7 @@
 var PORT = 8888;
-var app = require('express').createServer(),
-    io = require('socket.io')(app);
+var app = require('express')(),
+    http = require('http').Server(app),
+    io = require('socket.io')(http);
 
 module.exports = (function(){
    function inner(){
