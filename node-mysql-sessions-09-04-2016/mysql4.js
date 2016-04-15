@@ -1,4 +1,5 @@
-// ~/Dropbox/docs1111111/node/mysql-3-sessions/mysql4.js
+// ~/Dropbox/docs1111111/node/git/node-mysql-sessions-09-04-2016/mysql4.js
+// https://github.com/gossoudarev/webteach/tree/master/node-mysql-sessions-09-04-2016/mysql4.js
 
 var mysql      = require('mysql'),
     conn 	   = mysql.createConnection(  require('./bd.json')   );
@@ -38,4 +39,4 @@ module.exports = (function(){
 	  };
     }
   return new inner;
-})();;
+})();
