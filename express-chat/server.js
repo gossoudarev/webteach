@@ -16,7 +16,8 @@ module.exports = (function(){
 		   
 		   
 		  // подводит итог всему запуск слушания цикла запросов
-		  app.listen(process.env.port || PORT, function(){
+		  //важно: не app.listen
+		  http.listen(process.env.port || PORT, function(){
 		  	console.log(PORT)
 		  });  
       };   
