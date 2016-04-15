@@ -5,8 +5,8 @@ var io = require('socket.io')(http);
 
 function start(){
       app.get('/chat/', function(req, res){
-            //res.sendfile('chat.html');
-            res.redirect('/get?html=chat0_1debc');
+            res.sendfile('chat.html');
+            //res.redirect('/get?html=chat0_1debc');
       });
 
    io.on('connection', function(socket){
