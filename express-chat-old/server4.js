@@ -9,7 +9,7 @@ module.exports = (function(){
 		  
 		  
 	      app.get('/chat/', function(req, res){
-	            res.sendfile('chat.html');
+	            res.sendFile(__dirname + '/chat.html');
 	      });
 
 		   io.on('connection', function(socket){
