@@ -5,4 +5,4 @@ User.prototype.hello = function(usr){
   console.log('Hello, ' + usr.name  + '!');
 };
 
-exports.createUser = User;
+module.exports.createUser = User;
