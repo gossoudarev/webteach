@@ -51,7 +51,9 @@ module.exports = (function(){
 
 		  //middleware
 		  app.use('/md5/', function(req, res, next) {
-	
+	        //в зависимости от того, каким методом посылалось..
+			//если GET, то используется query, а не params
+			//при желании можно добавить посылку /md5/:what    
 		  	req.what = req.method=='POST' ? req.body : req.query;
 	
 		  	if (!req.what.src) {
@@ -63,7 +65,7 @@ module.exports = (function(){
   
 		  });
 
-		  app.all('/stas/', function(req, res) {
+		  app.all('/md5/', function(req, res) {
 	
 		  	console.log(info);
 	
