@@ -1,0 +1,20 @@
+{
+  "name": "md5sample",
+  "version": "1.0.0",
+  "description": "demo 27.02.2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demo",
+    "md5"
+  ],
+  "author": "Goss",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "md5": "^2.0.0"
+  }
+}
