@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>file ajax upload</title></head> 
+<body>
+  <input id="fileUploaded"  name="fileUploaded" type="file" data-url="http://kodaktor.ru:8886/api/fileupload">
+  <script>
+    console.clear();
+    document.querySelector('#fileUploaded').addEventListener('change',ev=>{
+       		var file = ev.target.files[0],
+      		    data = new FormData(),  
+                xhr = new XMLHttpRequest();
+            data.append('fileUploaded', file, file.name); 
+		 	xhr.open('POST', ev.target.dataset.url, true);
+		 	xhr.send(data);
+		 	xhr.onload = function(e){
+                console.log(  (this.status === 200) ? 'ok ' + this.responseText :  'fail'  );
+			};
+    });
+  </script>
+  
+ </body>
+</html>
