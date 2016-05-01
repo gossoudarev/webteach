@@ -1,20 +1,27 @@
 {
-  "name": "md5sample",
+  "name": "md5sample-express-test",
   "version": "1.0.0",
-  "description": "demo 27.02.2016",
+  "description": "test express 2016",
+  "engines": {
+      "node": "6.0.0"
+    },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/express-4-test"
+    },
   "keywords": [
     "demo",
-    "md5"
+    "express"
   ],
   "author": "Goss",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "md5": "^2.0.0"
+    "express": "4.13.4",
+    "md5": "2.0.0"
   }
 }

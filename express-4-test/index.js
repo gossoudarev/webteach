@@ -1,5 +1,3 @@
-var myServer = require('./server');
-myServer.start(function(result){
-	if (result) console.log(result);
-});
+require('./server').start(result=>
+result?console.log(result):console.log('started') );
 
