@@ -1,47 +1,37 @@
-var	PORT = 8888;
-var	express = require('express'),
-	app = express(),
-	md5 = require('md5');
-
-var bodyParser = require('body-parser');
+const PORT = 5555;
+var	  express = require('express'),
+	  app = express(),
+	  md5 = require('md5'),
+      bodyParser = require('body-parser');
      
-
-module.exports = (function(){
+module.exports = (()=>{
    function inner(){
-      this.start = function (whatToDo){
-           	  
-
-		  app.use ( bodyParser.json()   );
-		  app.use ( bodyParser.urlencoded({
-		  	extended: true
-		  }));
+      this.start = whatToDo=>{
+		  app.use ( bodyParser.json() )
+		     .use ( bodyParser.urlencoded({ extended: true}) );
 
 		  var info = {};
 
 		  //функция-слушатель для универсального middleware
 		  function all(req, res, next){
 	
-		  	var start = +new Date();
+			  	var start = +new Date();
 	
-		  	res.on('finish', function(){
-		  		info.url = req.url;
-		  		info.method = req.method;
-		  		info.duration = +new Date() - start;
-		  	})
+			  	res.on('finish', function(){
+			  		info.url = req.url;
+			  		info.method = req.method;
+			  		info.duration = +new Date() - start;
+			  	})
 	
-
-	
-		  	next();
+			  	next();
 		  }
 		  //универсальный middleware
-		  app.use('/*', all);
-
+		  app.use('/*', all);  // или просто app.use(all)
 
 		  //endpoint - когда есть send, прекращается цепочка middleware
-		  app.get('/', function(req, res) {
+		  app.get('/', (req, res) => {
 		  	/*
-		  	res.writeHead(200, { 
-		  					"Access-Control-Allow-Origin": "*"});
+		  	   res.set({'Access-Control-Allow-Origin': '*', 'elias': 'goss'});
 		  	*/
 		  	res.sendFile(__dirname +'/public/page.html');
 		  });
@@ -50,51 +40,41 @@ module.exports = (function(){
 		  app.use(express.static(__dirname + '/public'));
 
 		  //middleware
-		  app.use('/md5/', function(req, res, next) {
-	        //в зависимости от того, каким методом посылалось..
-			//если GET, то используется query, а не params
-			//при желании можно добавить посылку /md5/:what    
-		  	req.what = req.method=='POST' ? req.body : req.query;
+		  app.use('/md5/', (req, res, next)=>{
+		        //в зависимости от того, каким методом посылалось..
+				//если GET, то используется query, а не params
+				//при желании можно добавить посылку /md5/:what    
+			  	req.what = req.method=='POST' ? req.body : req.query;
 	
-		  	if (!req.what.src) {
-		  		req.emptySrc=true; 
-		  	} else {
-		  		req.emptySrc=false;
-		  	}
-		  	next();	
-  
+			  	if (!req.what.src) {
+			  		req.emptySrc=true; 
+			  	} else {
+			  		req.emptySrc=false;
+			  	}
+			  	next();	
 		  });
 
-		  app.all('/md5/', function(req, res) {
+		  app.all('/md5/', (req, res)=>{
 	
-		  	console.log(info);
+			  	console.log(info);
 	
-		  	if (req.emptySrc) {
-		  		/*
-		  		res.writeHead(200, {"Content-Type": "application/json", 
-		  					"By": "Ilya Goss", 
-		  					"Access-Control-Allow-Origin": "*"});
-		  		*/					
-		  		res.json(     {'md5':'I don\'t  like empty strings!',
-		  					   'info' : info,
-		  					   'by' : 'goss'
-		  	    } );
-		  	} else {
-		  		res.json(     {'md5':md5(req.what.src),
-		  					   'info' : info,
-		  					   'by' : 'goss'	 				  
-		  	    } );
-		  	}
+			  	if (req.emptySrc) {				
+			  		res.json(     {'md5':'I don\'t  like empty strings!',
+			  					   'info' : info,
+			  					   'by' : 'goss'
+			  	    } );
+			  	} else {
+			  		res.json(     {'md5':md5(req.what.src),
+			  					   'info' : info,
+			  					   'by' : 'goss'	 				  
+			  	    } );
+			  	}
 	
 	
     
 		  });
 
-		  app.listen(process.env.port || PORT, function(){
-		  	  console.log(PORT)
-		  });
-
-
+		  app.listen(process.env.port||PORT,()=>console.log('--> Port %d listening!',PORT));
       };   
     }
   return new inner;
