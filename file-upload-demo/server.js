@@ -3,10 +3,13 @@ var	  express = require('express'),
 	  app = express(),
       request = require('request'),
       url = require('url'),
-	  multer  =   require('multer');
+	  multer  =   require('multer'),
+	  mkdirp = require('mkdirp');
 module.exports = (()=>{
    function inner(){
        this.start = whatToDo=>{
+		  mkdirp(__dirname + '/uploads', err=> console.log(  err? err : 'uploads dir created!' ));
+			   		   
  		  app.use(express.static(__dirname + '/public'))
 	         .use((req, res, next)=>next()); 
  		  app.get('/', (req, res) => {
