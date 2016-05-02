@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head><meta charset="utf-8"> 
+  <title>kodaktor.ru/session_xget Express sessions demo GET form</title>
+  <style>
+    * {font-family: sans-serif; zoom: 110%} h2 {text-align: center} button {width: 99%; margin-top: 3px}
+    div {border: outset 5px; border-radius: 10px; padding: 10px; width: 200px; margin-left: 50%; transform:translate(-50%);}
+    input, button { border-radius: 7px;}
+   
+  </style> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+     $(()=>{
+       $('button').on('click',function(){
+         // 'http://kodaktor.ru:5544/login/check/:login/:pass';
+         let dynpath = '/' + $('#express-demo-login').val() + '/' + $('#express-demo-password').val();
+         $.ajax({
+            url: 'http://kodaktor.ru:5544/login/check' + dynpath,
+            data: {},
+            method: 'GET'
+         })
+           .done( result  => {
+               if (result.well) {
+                  $(document.body).html(result.html);
+               } else {
+                  $(this).html(result.html)
+               }
+              
+           })
+           .fail( result => {
+              $(this).html('Не соединяется!');
+           }); 
+     }) 
+     })
+  </script>
+ </head>
+ <body>
+    <h2>Введите логин и пароль!</h2>
+    <div>
+      <input id='express-demo-login'><label for='express-demo-login'> Логинъ</label>  <br>
+      <input id='express-demo-password' type='password'><label for='express-demo-password'> Пароль</label>   <br>
+      <button>Залогиниться!</button>
+            
+    </div>  
+    
+ </body>
+</html>
