@@ -1,4 +1,4 @@
-const BD = '/var/www/bd.json';
+const BD = './bd';
 var   mysql = require('mysql'),
 	  conn = mysql.createConnection( require(BD) );
 module.exports = (()=>{ 

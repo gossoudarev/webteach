@@ -1,7 +1,7 @@
 const PORT = 5556;
 var	  express = require('express'),
       app = express(),
-	  q = require('mysqlconn');
+	  q = require('./mysqlconn');
      
 module.exports = (()=>{
    function inner(){
@@ -38,6 +38,3 @@ module.exports = (()=>{
     }
   return new inner;
 })();
-
-
-
