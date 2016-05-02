@@ -1,0 +1,6 @@
+{
+    "user" : "goss",
+    "password" : "gosspassw",
+    "host" : "localhost",
+    "database" : "gossdb"
+}
