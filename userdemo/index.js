@@ -1,8 +1,8 @@
-var U = require('./user');
-var version = require('./version')();
+var U = require('./user'),
+    version = require('./version')(),
 
-var Nick = new U.createUser('Nicholas');
-var Alex = new U.createUser('Alexander');
+    Nick = new U.createUser('Nicholas'),
+    Alex = new U.createUser('Alexander');
 
 Nick.hello(Alex);
 
