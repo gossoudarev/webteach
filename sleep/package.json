@@ -1,0 +1,22 @@
+{
+  "name": "sleeper",
+  "version": "1.0.0",
+  "description": "a response delayer",
+  "main": "index.js",
+  "engines": {
+    "node": "6.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/sleep"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "EliasGoss",
+  "license": "ISC"
+}
