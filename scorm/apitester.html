@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Scorm tester - тестер кода API</title><meta charset="utf-8">
+   <script type="text/javascript"  src="apiwrapper10.js"></script> 
+   <style> .code input, .code button {font-size: 18px} .code input {width: 600px} body{border:outset}</style>
+   <script>
+     var cods = [
+       function(){ myAPI.Initialize('');  },     
+       function(){ myAPI.SetValue('cmi.score.raw', 100);  },  
+       function(){ myAPI.SetValue('cmi.score.scaled', 100); },    
+       function(){ myAPI.SetValue('cmi.completion_status', 'completed'); }, 
+       function(){ myAPI.SetValue('cmi.success_status', 'passed'); }, 
+       function(){ myAPI.Terminate(''); },
+       function(){ alert( myAPI.GetValue('cmi.learner_name')  ); },
+       function(){ alert('!!'); }         
+     ]
+   
+       
+   </script>
+   
+ </head>
+ <body>
+   
+    <h1>Scorm tester - тестер кода API</h1>
+    <div id='line1' class='code'><button>Execute!</button><input></div>
+    <div id='line2' class='code'><button>Execute!</button><input></div>
+    <div id='line3' class='code'><button>Execute!</button><input></div> 
+    <div id='line4' class='code'><button>Execute!</button><input></div> 
+    <div id='line5' class='code'><button>Execute!</button><input></div> 
+    <div id='line6' class='code'><button>Execute!</button><input></div> 
+    <div id='line7' class='code'><button>Execute!</button><input></div> 
+    <div id='line8' class='code'><button>Execute!</button><input></div>    
+<script>
+   var divs = document.querySelectorAll('.code');
+   for (var i=0; i<divs.length; ++i){
+     
+     divs[i].lastChild.value = cods[i].toString().substring(cods[i].toString().indexOf('{') + 1, cods[i].toString().lastIndexOf('}'));
+     divs[i].firstChild.addEventListener('click', function(){  try {  eval(  this.nextSibling.value  ) } catch(e){ alert(e)  }   }    );
+     
+   }
+  
+   
+</script>                                                                        
+ </body>
+</html>
