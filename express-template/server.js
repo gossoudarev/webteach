@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+/*jshint -W058 */
+
 const PORT = 5555;
 var	  express = require('express'),
       app = express();
@@ -22,7 +25,7 @@ module.exports = (()=>{
   return new inner;
 })();
 
-//http://kodaktor.ru/express_temp - demo client, test CORS
+// http://kodaktor.ru/api/req - demo client, test CORS
 
 
 

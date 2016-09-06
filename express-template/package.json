@@ -1,7 +1,7 @@
 {
   "name": "express-template",
-  "version": "1.0.0",
-  "description": "a tiny framework for an express app",
+  "version": "2.0.0",
+  "description": "a tiny framework for an express app - jshint-ok",
   "main": "index.js",
   "engines": {
     "node": "6.0.0"
