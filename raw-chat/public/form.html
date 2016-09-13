@@ -7,15 +7,15 @@
   <script>
      $(function(){
        var inter = setInterval(function(){    
-			$.get("/get", function(result){
-           		$("div").html(result);
+			$.get('/get', function(result){
+           		$('div').html(result);
          	})       
        }, 1000); 
-       $("#b").on("click", function(){
+       $('#b').on('click', function(){
        		 
-            $.get("/add", {"what" : $("#i").val()}, function(result){
-              $("input").css({"background":"green"});
-              setTimeout(function(){  $("input").css({"background":"none"});  }, 3000);
+            $.get('/add', {"what" : $('#i').val()}, function(result){
+              $('input').css({"background":"green"});
+              setTimeout(function(){  $('input').css({"background":"none"});  }, 3000);
          	})
        });
      })
