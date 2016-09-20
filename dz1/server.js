@@ -6,6 +6,7 @@ var   http = require('http'),
       md5 = require('md5'),
       sha1 = require('sha1'),
       url =  require('url'),
+ 	  
       
       qParse = requrl => url.parse(requrl, true).query;
 
@@ -17,8 +18,13 @@ module.exports = (()=>{
 			  switch ( req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()  ) {
 				  case '/display' :
 				  	
-				  	   var src = qParse(req.url).src,
-				  	       type = qParse(req.url).type,
+					   var src = qParse(req.url).src;
+					   //for elegancy lovers
+					   //src = (src == undefined ) ? (new Date()).toString() : src;
+					   //for simple people
+					   if (src == undefined ) src= (new Date()).toString();
+					  
+				  	   var type = qParse(req.url).type,
 				  	       hash = qParse(req.url).hash,
 				  	       
 				  	       resps = {'md5' : md5(src), 'sha1': sha1(src)}; // !!!
@@ -35,7 +41,7 @@ module.exports = (()=>{
 					  	   	   res.end( JSON.stringify (    resp   )  );
 					  	   } else {
 					  	   	   res.writeHead(200, {'Content-Type': 'text/plain'});
-					  	   	   res.end( hash + '=' + resps[hash]   );
+					  	   	   res.end( hash + '=' + resp[hash]   );
 					  	   } 
 				  	   
 				  	   }
@@ -53,7 +59,7 @@ module.exports = (()=>{
 			 }
 			
 		  }).listen(process.env.PORT,()=>
-		  	        console.log('--> Port %d listening!',PORT)
+		  	        console.log(`--> Port ${PORT} listening!`)
 	         );
       };   
     }
