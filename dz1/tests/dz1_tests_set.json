@@ -1,0 +1,18 @@
+{
+   "url" : "https://node1-gossoudarev.c9users.io/display",
+   "urlinputs": [
+       "?src=Ilya&hash=md5&type=json",
+       "?src=Илья&hash=sha1&type=json"
+	
+   ],
+   "outputs": [
+       {
+           "md5": "d183d7aafd7115b1d044d0e1bac1ddd4"
+       },
+       {
+           "sha1": "a6234670ebd2362e39ca8a6deb162510172fc81d"
+       }	
+  
+   ]
+}
+
