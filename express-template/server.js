@@ -19,13 +19,14 @@ module.exports = (()=>{
    			  res.json({'gossApi':'started ok!'});
    		  }); 
 		  		  
-		  app.listen(process.env.port||PORT,()=>console.log('--> Port %d listening!',PORT));
+		  app.listen(process.env.PORT||PORT,()=>console.log(`--> Port ${PORT} listening!`));
       };   
     }
   return new inner;
 })();
 
 // http://kodaktor.ru/api/req - demo client, test CORS
+// app.listen(process.env.PORT)  - for cloud9
 
 
 
