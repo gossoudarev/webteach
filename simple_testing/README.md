@@ -1,6 +1,6 @@
 it's for phantomjs docker testing :-)
 
-wget https://raw.githubusercontent.com/gossoudarev/webteach/master/simple-testing/install.sh
+wget https://raw.githubusercontent.com/gossoudarev/webteach/master/simple_testing/install.sh
 
 bash install.sh it will make a directory
 
