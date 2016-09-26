@@ -4,6 +4,9 @@ wget https://raw.githubusercontent.com/gossoudarev/webteach/master/simple_testin
 
 bash install.sh it will make a directory
 
+run the test
+explain the last case failure
+
 ALSO
 http://kodaktor.ru/g/testing
 
