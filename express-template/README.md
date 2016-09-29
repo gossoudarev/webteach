@@ -8,4 +8,11 @@
 | 6.		| Goto localhost:PORT or c9 or your server
 
 Also here: http://kodaktor.ru/express-template.zip
+
 and curl 'http://kodaktor.ru/{express-template.zip}' -o  '#1'
+
+ALSO 
+
+wget https://raw.githubusercontent.com/gossoudarev/webteach/master/express-template/install.sh
+
+bash install.sh
