@@ -16,3 +16,5 @@ http://kodaktor.ru/g/testing
 TASK  
 modify http://kodaktor.ru/g/testing_kramer testing script  
 to make it click the button and read its updated caption
+
+You can run single_click to see how to deal with remote clicking
