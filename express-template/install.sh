@@ -7,5 +7,5 @@ wget https://raw.githubusercontent.com/gossoudarev/webteach/master/express-templ
 cd public
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/express-template/public/page.html
 
-echo cd express-temaplate
+echo cd express-template
 echo npm start or PORT=XXXX npm start or port=YYYY pm2 start index.js --watch or...
