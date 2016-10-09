@@ -1,15 +1,37 @@
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/node-server-template/install.sh
 
-bash install.sh it will make a directory
+bash install.sh создаст каталог, далее cd в этот каталог и npm install
 
-uses 4444 for default but  
+Обратите внимание на способ указания порта
 
-port=9876 npm start
+listen(process.env.PORT || PORT,()=>
 
-then localhost:9876
+		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
+					
+в среде c9 будет установлена переменная окружения PORT
 
-(will say 4444 listening but run on 9876)
+при запуске получите   --> Port 8080 listening!			
 
-BETTER
+если запускать локально, то 
 
-port=8765 pm2 start index.js --watch
+  если npm start   или node index.js - будет использовано внутренне указанное 4444 в server.js
+  
+  иначе если PORT=7777 npm start  или  PORT=7777 node index.js   - будет взято это значение
+  
+ аналогично с pm2
+ 
+    pm2 start index.js --watch
+	
+	или
+	
+	PORT=8765 pm2 start index.js --watch  
+
+=======
+
+в проекте express-template написано не в стиле c9 строчными буквами process.env.PORT
+
+поэтому там уже port=7777 npm start  или  port=7777 node index.js
+
+    или port=8765 pm2 start index.js --watch
+
+=======

@@ -24,13 +24,10 @@ module.exports = (()=>{
 				       });
 			 }
 			
-		  }).listen(process.env.port||PORT,()=>
-		  	        console.log('--> Port %d listening!',PORT)
+		  }).listen(process.env.PORT || PORT,()=>
+		  	        onsole.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
 	         );
       };   
     }
   return new inner;
 })();
-
-
-
