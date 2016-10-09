@@ -58,8 +58,8 @@ module.exports = (()=>{
 				       });
 			 }
 			
-		  }).listen(process.env.PORT,()=>
-		  	        console.log(`--> Port ${PORT} listening!`)
+		  }).listen(process.env.PORT || PORT,()=>
+		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
 	         );
       };   
     }
