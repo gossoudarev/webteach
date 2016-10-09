@@ -33,7 +33,7 @@ module.exports = (()=>{
 			 }
 			
 		  }).listen(process.env.PORT || PORT,()=>
-		  	        onsole.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
+		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
 	         );
       };   
     }
