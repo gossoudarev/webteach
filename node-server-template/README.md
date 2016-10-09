@@ -1,3 +1,9 @@
+Архив здесь: http://kodaktor.ru/node-server-template.zip
+
+... curl 'http://kodaktor.ru/{node-server-template.zip}' -o  '#1'
+
+ИЛИ
+
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/node-server-template/install.sh
 
 bash install.sh создаст каталог, далее cd в этот каталог и ...

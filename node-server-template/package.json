@@ -1,10 +1,10 @@
 {
   "name": "node-server-template",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "a tiny framework for a node js server",
   "main": "index.js",
   "engines": {
-    "node": "6.0.0"
+    "node": "6.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
