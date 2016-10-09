@@ -1,6 +1,6 @@
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/node-server-template/install.sh
 
-bash install.sh создаст каталог, далее cd в этот каталог и npm install
+bash install.sh создаст каталог, далее cd в этот каталог и ...
 
 Обратите внимание на способ указания порта
 

@@ -9,5 +9,4 @@ wget https://raw.githubusercontent.com/gossoudarev/webteach/master/node-server-t
 
 echo ===================
 echo cd node-server-template
-echo npm install
 echo npm start  or  PORT=XXXX npm start   or  PORT=YYYY pm2 start index.js --watch  or...
