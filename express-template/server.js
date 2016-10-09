@@ -18,15 +18,16 @@ module.exports = (()=>{
 			  res.set({'Access-Control-Allow-Origin': '*', 'elias': 'goss'}); //CORS - outer reqs
    			  res.json({'gossApi':'started ok!'});
    		  }); 
-		  		  
-		  app.listen(process.env.PORT||PORT,()=>console.log(`--> Port ${PORT} listening!`));
+		  
+		  app.set('port',  process.env.port||PORT )		  
+		     .listen( app.get('port') ,()=>console.log(`--> Port ${ app.get('port') } listening!!!`));
       };   
     }
   return new inner;
 })();
 
 // http://kodaktor.ru/api/req - demo client, test CORS
-// app.listen(process.env.PORT)  - for cloud9
+// process.env.port  - for cloud9 or ... port=8765 npm start
 
 
 

@@ -16,3 +16,20 @@ ALSO
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/express-template/install.sh
 
 bash install.sh
+
+===============
+
+now about PORT
+
+you can run like  port=8765 npm start and it will override the PORT constant in server.js
+
+or even 
+
+port=8765 pm2 start index.js --watch
+
+and you can put this into package.json start section
+
+===============
+
+don't forget about tests!
+
