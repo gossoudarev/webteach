@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>apitest.html - Express Template API test</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+     $(()=>{
+       $('h2').on('click',function(){
+         $.ajax({
+           url: '/api',  
+            data: {},
+            method: 'GET'
+         })
+           .done( result => {
+              $(this).append('<hr>'+result.gossApi);
+           }); 
+       }) 
+     })
+  </script>
+ </head>
+ <body>
+    <h2>Нажмите на заголовок страницы!</h2>
+ </body>
+</html>
