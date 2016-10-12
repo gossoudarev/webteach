@@ -1,12 +1,14 @@
 /*jshint esversion: 6 */
 /*jshint -W058 */
 
-const PORT = 5005;
+const PORT = 7654;
 var http = require('http'),
     url = require('url'),
     fs = require('fs'),
-    chat = 'chat.txt';
-let qry = requrl=> url.parse(requrl, true).query.what;
+    chat = 'chat.txt',
+    
+	qParse = requrl => url.parse(requrl, true).query;
+
 module.exports = (()=>{
    function inner(){
       this.start = whatToDo=>{
@@ -16,7 +18,7 @@ module.exports = (()=>{
 			   case '/add' :
 			        res.writeHead(200, {'Content-Type': 'text/html'});
 			        res.write('<h2>Добавляем '+ what + '</h2>');
-			        var what = qry(req.url);
+			        var what = qParse(req.url).what;
 			        if (what) {
 			          fs.appendFile(chat, '\n'+what, function(err){
 			            if (err) throw err;
@@ -48,8 +50,8 @@ module.exports = (()=>{
 			        });
 			  }
 			
-		  }).listen(process.env.port||PORT,()=>
-		  	        console.log('--> Port %d listening!',PORT)
+		  }).listen(process.env.PORT || PORT,()=>
+		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
 	         );
       };   
     }

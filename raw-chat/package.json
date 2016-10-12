@@ -1,14 +1,22 @@
 {
-  "name": "chat",
-  "version": "1.0.0",
-  "description": "non blocking filesystem chat",
-  "main": "5.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "node-non-blocking-chat",
+  "version": "3.0.0",
+  "description": "a tiny framework for a node js server",
+  "main": "index.js",
+  "engines": {
+    "node": "6.6.0"
   },
-  "author": "ELias Goss",
-  "license": "ISC",
-  "dependencies": {
-    "md5": "^2.0.0"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/raw-chat"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "EliasGoss",
+  "license": "ISC"
 }

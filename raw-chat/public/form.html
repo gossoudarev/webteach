@@ -6,17 +6,28 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
      $(function(){
-       var inter = setInterval(function(){    
-			$.get('/get', function(result){
+	   //обсудим, чем плох setInterval в свете асинхронности	 
+	   //сделайте так, чтобы был setTimeout и только при включённом флажке "Обновлять"	 
+	   //приведите форму к красивому виду	 
+       var inter = setInterval(function(){  
+		    $.ajax({
+		        url: '/get/',
+		        method: 'GET'
+		    })
+			.done( result => {
            		$('div').html(result);
-         	})       
+         	});       
        }, 1000); 
        $('#b').on('click', function(){
-       		 
-            $.get('/add', {"what" : $('#i').val()}, function(result){
-              $('input').css({"background":"green"});
-              setTimeout(function(){  $('input').css({"background":"none"});  }, 3000);
-         	})
+       		$.ajax({
+				url: '/add/',
+				data: {"what" : $('#i').val()},
+				method: 'GET'
+			})
+			.done( result => {
+                $('input').css({"background":"green"});
+                setTimeout(function(){  $('input').css({"background":"none"});  }, 3000);
+			});		 
        });
      })
   </script>
