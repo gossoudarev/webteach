@@ -11,7 +11,7 @@
 	   //приведите форму к красивому виду	 
        var inter = setInterval(function(){  
 		    $.ajax({
-		        url: '/get/',
+		        url: '/read/',
 		        method: 'GET'
 		    })
 			.done( result => {
@@ -21,7 +21,7 @@
        $('#b').on('click', function(){
        		$.ajax({
 				url: '/add/',
-				data: {"what" : $('#i').val()},
+				data: {"addedMessage" : $('#i').val()},
 				method: 'GET'
 			})
 			.done( result => {
