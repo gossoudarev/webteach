@@ -2,6 +2,20 @@ it's for phantomjs docker testing :-)
 
 docker pull yfix/phantomjs
 
+  (now look at: docker exec -it phan sh)
+
+docker run -itd   --name phan   yfix/phantomjs
+
+  (now look at: docker ps)
+
+  (and then later: docker ps -a)
+
+docker exec -it phan bash
+
+  (now we're inside it, could do su, apt-get updatem apt-get install mc and so on)
+
+
+
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/simple_testing/install.sh
 
 bash install.sh it will make a directory
