@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>HTML5 JQuery AJAX</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="http://vuejs.org/js/vue.js"></script>
+  <script>
+     $(()=>{
+       $('h2').on('click',function(){         
+         new Vue({
+              el:"#victorbooks",
+              data:{
+                  books:''
+              },
+              created: function() {
+    			  this.fetchData()
+  			  }, 
+              methods: {
+                  fetchData :function(){
+                     $.ajax({
+            			dataType:"json",
+            			url:'/j/victor_3bdfb',
+            			method:'GET'
+         			 })
+           			 .done(result=>{
+              			this.books = result.books;
+
+           			 })
+           			 .fail(()=>console.log('Error!'))
+           			 .always(()=>console.log('Fin!'))
+                  }
+              }
+         });
+       }) 
+     })
+  </script>
+ </head>
+ <body>
+    <h2>Нажмите здесь для считывания из JSON!</h2>
+    <div id="victorbooks">
+      <ol> 
+        <li v-for="book in books">
+           {{book.title}}
+        </li>
+      </ol>
+    </div>
+   
+   
+ </body>
+</html>

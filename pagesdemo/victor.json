@@ -1,0 +1,14 @@
+{
+	"name":"Victor",
+	"familyname":"Pelevin",
+	"status":{
+		"writer":"perfect",
+		"teacher":"great"
+	},
+	"books":[
+		{"title":"Священная книга оборотня"},
+		{"title":"Жизнь насекомых"},
+		{"title":"Три цукербрина"},
+		{"title":"S.N.U.F.F"}
+	]
+}
