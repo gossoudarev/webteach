@@ -1,3 +1,5 @@
+to launch: http://gossoudarev.github.io/webteach/pagesdemo/index.html 
+
 this is a way to demonstrate GitHub usage
 
 for hosting a simple web client app
