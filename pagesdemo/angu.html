@@ -9,8 +9,8 @@
  <script>
   let victor = angular.module('victor', []);
   victor.controller('victorController', function ($scope, $http){
-    $http.get('victor.json').success(function(books) {
-      $scope.books = books;
+    $http.get('victor.json').success(function(data) {
+      $scope.books = data.books;
 	  });
   });
  </script>
