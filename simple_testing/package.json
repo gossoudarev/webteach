@@ -1,0 +1,19 @@
+{
+  "name": "zombie4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"start": "node recursion.js", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "zombie": "4.2.1"
+  },
+  "dependencies": {
+    "bluebird": "3.4.6",
+    "q": "1.4.1"
+  }
+}

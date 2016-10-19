@@ -2,7 +2,7 @@ it's for phantomjs docker testing :-)
 
 docker pull yfix/phantomjs
 
-  (now look at: docker exec -it phan sh)
+   
 
 docker run -itd   --name phan   yfix/phantomjs
 
@@ -12,7 +12,7 @@ docker run -itd   --name phan   yfix/phantomjs
 
 docker exec -it phan bash
 
-  (now we're inside it, could do su, apt-get updatem apt-get install mc and so on)
+  (now we're inside it, could do su, apt-get update apt-get install mc and so on)
 
 
 
