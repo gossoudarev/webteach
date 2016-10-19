@@ -34,15 +34,19 @@ module.exports = (()=>{
 				  	   	   res.end('<h1>Illegal hash request attempt!</h1>');
 				  	   } else {
 				  	   	
-					  	   if (type==='json') {
-					  	   	   res.writeHead(200, {'Content-Type': 'application/json'});
-					  	   	   var resp = {};
-					  	   	   resp[hash] = resps[hash]; // :-)))))))))))
-					  	   	   res.end( JSON.stringify (    resp   )  );
-					  	   } else {
-					  	   	   res.writeHead(200, {'Content-Type': 'text/plain'});
-					  	   	   res.end( hash + '=' + resp[hash]   );
-					  	   } 
+		 				  if (!resps.hasOwnProperty(hash)) {
+		 				  		res.send('<h1>Illegal hash request attempt!</h1>');
+		 				  } else {
+		 						var resp = {};
+		 		  				resp[hash] = resps[hash]; 
+		 				  		if (type==='json') {
+					  	   	   	 	res.writeHead(200, {'Content-Type': 'application/json'});
+					  	   	   	    res.end( JSON.stringify (    resp   )  );
+		 				  		} else {
+	 					  	   	    res.writeHead(200, {'Content-Type': 'text/plain'});
+	 					  	   	    res.end( hash + '=' + resp[hash]   );
+		 				  		} 
+		 				  }
 				  	   
 				  	   }
 
