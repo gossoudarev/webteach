@@ -41,3 +41,35 @@ listen(process.env.PORT || PORT,()=>
     или port=8765 pm2 start index.js --watch
 
 =======
+
+в развитие этого темплейта - примитивный файл-сервер
+
+https://github.com/gossoudarev/webteach/tree/master/node-server-file
+
+
+=======
+
+если мы хотим видеть приложение изнутри докер-контейнера:
+
+[docker pull yfix/phantomjs]
+
+docker run -itd -p YYYY:4444   --name fileserver   yfix/phantomjs
+
+wget https://raw.githubusercontent.com/gossoudarev/webteach/master/node-server-file/index.js
+
+
+если внутри сервер будет работать на порту 4444
+
+то снаружи будет виден как localhost:YYYY
+
+если мы хотим устроить файл-сервер в локальную сеть,
+
+то проще всего -p 80:4444
+
+и тогда обращаясь просто по http://[ip]
+
+соседи будут видеть наш файл-сервер.
+
+
+
+
