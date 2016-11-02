@@ -20,3 +20,7 @@ wget https://raw.githubusercontent.com/gossoudarev/webteach/master/sqlite/demo.d
 [ip]/api/user/all/
 
 Маршрут user оформить маршрутизатором /routes/user
+
+Если к этому моменты рассмотрены шаблонизаторы, использовать их.
+
+Далее - REST API, user remove, update password и т.д.
