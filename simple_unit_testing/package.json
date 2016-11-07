@@ -1,0 +1,15 @@
+{
+  "name": "tape_temp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js; exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "4.6.2"
+  }
+}
