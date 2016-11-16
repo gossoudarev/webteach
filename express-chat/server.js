@@ -20,7 +20,7 @@ module.exports = (()=>{
    		  }); 
 
 
-             io.on('connection', function(socket){
+             io.on('connection', socket=>{
                   console.log('a user connected!');
                       
                       socket.broadcast.emit('chat message push', '>> a user connected '); 
@@ -29,23 +29,21 @@ module.exports = (()=>{
 //only the newcomer
 
                   //message from client - recast to others
-                 socket.on('chat message', function(msg){
-                     console.log('message: ' + msg);
+                 socket.on('chat message', msg=>{
+                     console.log(`message: ${msg}`);
                      socket.broadcast.emit('chat message push', msg);
-                     socket.emit('chat message push', '<strong>me:</strong> ' + msg );
+                     socket.emit('chat message push', `<strong>me:</strong>  ${msg}` );
                  });
-                 socket.on('disconnect', function(){
+                 socket.on('disconnect', ()=>{
                    console.log('a user disconnected!');
                    socket.broadcast.emit('chat message push', '>> a user disconnected ');
                  });                      
           });
 
 
-
-
           app
 
-            .get('/chat', function(req, res){
+            .get('/chat', (req, res)=>{
           	res.redirect('/page.html');
           	
       	  }) 
