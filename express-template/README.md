@@ -2,7 +2,9 @@
 | ------------- | ------
 | 1.		| Download the archieve
 | 2.		| Unzip
-| 3.		| Run npm install
+  2a.	   | maybe use node 7.x.y
+  2b.	   | maybe change "start" from "node index.js" to "nodemon"				
+| 3.		| Run npm i
 | 4.		| Specify the PORT as convenient in server.js
 | 5.		| Run npm start
 | 6.		| Goto localhost:PORT or c9 or your server
@@ -22,6 +24,7 @@ bash install.sh
 now about PORT
 
 you can run like  port=8765 npm start and it will override the PORT constant in server.js
+
 
 or even 
 
