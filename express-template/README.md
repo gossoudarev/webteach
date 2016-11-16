@@ -36,3 +36,11 @@ and you can put this into package.json start section
 
 don't forget about tests!
 
+
+==============
+
+see routing
+
+and app methods chain
+
+
