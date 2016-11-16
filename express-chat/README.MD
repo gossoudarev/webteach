@@ -13,8 +13,6 @@ npm i
 
 npm i -S socket.io
 	
-
-
     http = require('http').Server(app),
     io = require('socket.io')(http);
 
@@ -22,3 +20,8 @@ npm i -S socket.io
     внизу где было app.listen теперь будет http.listen
 
 далее см. lab.pdf
+
+в папке public страницу page.html заменим вот на эту:
+
+curl 'http://kodaktor.ru/g/express_clientchat' -o 'page.html'
+
