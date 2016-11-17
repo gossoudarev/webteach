@@ -1,0 +1,33 @@
+{{#section 'head'}}
+     <title>Users list</title>
+     <meta charset="utf-8">
+	 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+	 <script src="/socket.io/socket.io.js"></script> 
+	 <link rel="stylesheet" href="//kodaktor.ru/css/board3">
+     <!--  no need for  jQuery here anymore - socket does the job!   -->
+	 <script>
+       	var socket = io();
+           socket.on('users_modify', function(result){
+                let	render = (view,context) => Handlebars.compile( document.querySelector('#'+view).innerHTML)(context) ;
+                document.querySelector('#r').innerHTML =  render('userslist',{"users":result.users})  ;
+        }); 
+	 </script>
+{{/section}}
+
+<h1>Welcome to Users!</h1>
+<p>{{text}}</p>
+
+    <div id='r'></div>
+   
+    <script id='userslist' type='text/x-handlebars-template'>
+     <ul>
+       \{{#each users}}
+         <li>
+            \{{login}} :  \{{password}}
+         </li>
+       \{{/each}}
+     </ul>
+   </script>
+   
+   
+   

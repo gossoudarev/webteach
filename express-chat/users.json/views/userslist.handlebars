@@ -1,0 +1,15 @@
+{{#section 'head'}}
+     <title>Users view for  {{text}}</title>
+     <meta charset="utf-8">
+{{/section}}
+
+<h1>Welcome!</h1>
+<p>You are at {{text}}!</p>
+
+<ul>
+{{#each users}}
+     <li>
+         {{login}} :  {{password}}
+     </li>
+{{/each}}
+</ul>

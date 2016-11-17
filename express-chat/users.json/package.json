@@ -1,0 +1,33 @@
+{
+  "name": "socketed json server",
+  "version": "1.0.0",
+  "description": "express + socket + lodash",
+  "main": "index.js",
+  "engines": {
+    "node": "7.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/express-chat"
+  },
+  "keywords": [
+    "socket.io",
+    "express"
+  ],
+  "author": "EliasGoss",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "4.13.4",
+    "express-handlebars": "^3.0.0",
+    "jsonfile": "2.4.0",
+    "lodash": "4.16.6",
+    "morgan": "1.7.0",
+    "request": "^2.76.0",
+    "socket.io": "1.5.1"
+  }
+}
