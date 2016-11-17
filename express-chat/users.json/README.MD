@@ -1,8 +1,12 @@
 This is an app 'grown' between 15.09.2016 & 17.11.2016
 
-while working with IFMO web technologies master program
+while working with IFMO web technologies master program students
 
 we gradually studied routing, templating, middleware
+
+In mid October we started making a simple JSON server with REST API
+
+like GET /users gives the list, POST /users adds a user and so on
 
 On 17.11.2016 I demoed the express-chat socket.io sample
 
@@ -29,6 +33,10 @@ f) develop sign up procedure along with captcha and emailing
 g) develop passport authentication
 
 h) make it MVC-good-looking, maybe like megaboilerplate
+
+i) provide some tests 
+
+and maybe do some webpacking or gulping around it
 
 ======
 
