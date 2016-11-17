@@ -16,7 +16,7 @@ Two of them did that very quickly ({Mark, Dima})
 
 ======
 
-So what? If seen as a step for further development we could
+So what? If seen as a step for further development this app could inspire us to:
 
 a) make the add/remove routes middleware-protected
 
