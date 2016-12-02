@@ -1,36 +1,27 @@
 /*jshint esversion: 6 */
-/*jshint -W058 */
 
-const PORT = 4444;
-var   http = require('http'),
+const PORT = 4444,
+      http = require('http'),
       fs = require('fs');
-     
-module.exports = (()=>{
-   function inner(){
-      this.start = whatToDo=>{
+
+module.exports = new Promise( resolve=>{     
 		  http.createServer((req, res)=>{
 		  	
-			  switch ( req.url.substring(0,6)  ) {
+			  switch ( req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase() ) {
 				  case '/about' :
 				       res.writeHead(200, {'Content-Type': 'text/html'});
-				       res.write( '<h1>Hello world!</h1>' );   
-				       res.end();
-					   whatToDo('about called!');
+				       res.end( '<h1>Hello world!</h1>' );   
 				       break;
 
 				  default:
 				       res.writeHead(200, {'Content-Type': 'text/html'});
 				       fs.readFile('public/page.html', (err, what)=>{
 				          if (err) throw err;
-				          res.write(what);
-				          res.end();
+				          res.end(what);
 				       });
 			 }
-			
-		  }).listen(process.env.PORT || PORT,()=>
-		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
+		  })
+		     .listen(process.env.PORT || PORT,()=>
+		  	        resolve(`--> Port ${process.env.PORT || PORT} listening!`)
 	         );
-      };   
-    }
-  return new inner;
-})();
+ });   
