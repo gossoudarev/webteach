@@ -9,9 +9,7 @@ var   http = require('http'),
 
 	  qParse = requrl => url.parse(requrl, true).query;
      
-module.exports = (()=>{
-   function inner(){
-      this.start = whatToDo=>{
+module.exports = new Promise( resolve=>{     
 		  http.createServer((req, res)=>{
 		  	
 			  switch (  req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()  ) {
@@ -48,10 +46,8 @@ module.exports = (()=>{
 				       });
 			 }
 			
-		  }).listen(process.env.PORT || PORT,()=>
-		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
-	         );
-      };   
-    }
-  return new inner;
-})();
+		  })
+		     .listen(process.env.PORT || PORT,()=>
+		  		  	        resolve(`--> Port ${process.env.PORT || PORT} listening!`)
+		  	         );
+		   });   		  
