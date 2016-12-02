@@ -1,12 +1,14 @@
 /*jshint esversion: 6 */
 
-const PORT = 4444;
-var   http = require('http'),
+const PORT = 4444,
+      http = require('http'),
       fs = require('fs'),
-  	  url = require('url'),
+       url = require('url'),
 	  CHAT = 'chat.txt',
 
 	  qParse = requrl => url.parse(requrl, true).query;
+
+//    TODO: обернуть промисами fs.методы
      
 module.exports = new Promise( resolve=>{     
 		  http.createServer((req, res)=>{
@@ -40,8 +42,7 @@ module.exports = new Promise( resolve=>{
 				       res.writeHead(200, {'Content-Type': 'text/html'});
 				       fs.readFile('public/form.html', (err, what)=>{
 				          if (err) throw err;
-				          res.write(what);
-				          res.end();
+				          res.end(what);
 				       });
 			 }
 			
