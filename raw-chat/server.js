@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-/*jshint -W058 */
 
 const PORT = 4444;
 var   http = require('http'),
