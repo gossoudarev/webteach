@@ -1,19 +1,17 @@
 /*jshint esversion: 6 */
-/*jshint -W058 */
-const PORT = 4444;
-var   http = require('http'),
+
+const PORT = 4444,
+
+      http = require('http'),
       fs = require('fs'),
       md5 = require('md5'),
       sha1 = require('sha1'),
       url =  require('url'),
  	  
-      
       qParse = requrl => url.parse(requrl, true).query;
 
-module.exports = (()=>{
-   function inner(){
-      this.start = whatToDo=>{
-		  http.createServer((req, res)=>{
+	  module.exports = new Promise( resolve=>{     
+	  		  http.createServer((req, res)=>{
 		  	
 			  switch ( req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()  ) {
 				  case '/display' :
@@ -50,22 +48,17 @@ module.exports = (()=>{
 				  	   
 				  	   }
 
-					   whatToDo('API hash called!');
 				       break;
 
 				  default:
 				       res.writeHead(200, {'Content-Type': 'text/html'});
 				       fs.readFile('public/page.html', (err, what)=>{
 				          if (err) throw err;
-				          res.write(what);
-				          res.end();
+				          res.end(what);
 				       });
 			 }
-			
-		  }).listen(process.env.PORT || PORT,()=>
-		  	        console.log(`--> Port ${  process.env.PORT || PORT  } listening!`)
-	         );
-      };   
-    }
-  return new inner;
-})();
+	  })
+	     .listen(process.env.PORT || PORT,()=>
+	  	        resolve(`--> Port ${process.env.PORT || PORT} listening!`)
+         );
+});  

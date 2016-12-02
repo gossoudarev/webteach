@@ -1,0 +1,14 @@
+{
+  "name": "zombie_tester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "node --harmony test.js"
+  },
+  "author": "ELiasGoss",
+  "license": "ISC",
+  "devDependencies": {
+    "zombie": "4.2.1"
+  }
+}
