@@ -3,7 +3,7 @@
 const PORT = 4444,
       http = require('http'),
       fs = require('fs'),
-       url = require('url'),
+      url = require('url'),
 	  CHAT = 'chat.txt',
 
 	  qParse = requrl => url.parse(requrl, true).query;
@@ -16,7 +16,7 @@ module.exports = new Promise( resolve=>{
 			  switch (  req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()  ) {
 				  case '/add' :
 				       res.writeHead(200, {'Content-Type': 'text/html'});
-					   var addedMessage = qParse(req.url).addedMessage;
+					   let addedMessage = qParse(req.url).addedMessage;
 					   if (addedMessage) {
 				       		res.write( `<h2>Добавляем ${addedMessage}!</h2>` ); 
 					   	    fs.appendFile(CHAT, '\n'+addedMessage, err=>{
