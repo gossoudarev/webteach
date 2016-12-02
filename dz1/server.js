@@ -10,19 +10,21 @@ const PORT = 4444,
  	  
       qParse = requrl => url.parse(requrl, true).query;
 
+//TODO - обернуть fs промисами
+
 	  module.exports = new Promise( resolve=>{     
 	  		  http.createServer((req, res)=>{
 		  	
 			  switch ( req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()  ) {
 				  case '/display' :
 				  	
-					   var src = qParse(req.url).src;
+					   let src = qParse(req.url).src;
 					   //for elegancy lovers
 					   //src = (src == undefined ) ? (new Date()).toString() : src;
 					   //for simple people
 					   if (src == undefined ) src= (new Date()).toString();
 					  
-				  	   var type = qParse(req.url).type,
+				  	   let type = qParse(req.url).type,
 				  	       hash = qParse(req.url).hash,
 				  	       
 				  	       resps = {'md5' : md5(src), 'sha1': sha1(src)}; // !!!
@@ -35,10 +37,10 @@ const PORT = 4444,
 		 				  if (!resps.hasOwnProperty(hash)) {
 		 				  		res.send('<h1>Illegal hash request attempt!</h1>');
 		 				  } else {
-		 						var resp = {};
+		 						let resp = {};
 		 		  				resp[hash] = resps[hash]; 
 		 				  		if (type==='json') {
-					  	   	   	 	res.writeHead(200, {'Content-Type': 'application/json'});
+					  	   	   	    res.writeHead(200, {'Content-Type': 'application/json'});
 					  	   	   	    res.end( JSON.stringify (    resp   )  );
 		 				  		} else {
 	 					  	   	    res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -59,6 +61,6 @@ const PORT = 4444,
 			 }
 	  })
 	     .listen(process.env.PORT || PORT,()=>
-	  	        resolve(`--> Port ${process.env.PORT || PORT} listening!`)
+	  	        resolve(`----> Port ${process.env.PORT || PORT} listening!`)
          );
 });  
