@@ -1,9 +1,7 @@
-| STEPS		| STATUS
+| STEPS	 	| STATUS
 | ------------- | ------
 | 1.		| Download the archieve
-| 2.		| Unzip
-  2a.	   | maybe use node 7.x.y
-  2b.	   | maybe change "start" from "node index.js" to "nodemon"				
+| 2.		| Unzip, may be run sudo npm i nodemon -g
 | 3.		| Run npm i
 | 4.		| Specify the PORT as convenient in server.js
 | 5.		| Run npm start
@@ -23,24 +21,20 @@ bash install.sh
 
 now about PORT
 
-you can run like  port=8765 npm start and it will override the PORT constant in server.js
+you can run like  
+
+| nodemon	 	    | pm2
+| ------------------- | ------
+| npm start  	     | 
+| port=4321 npm start | port=4321 pm2 start index.js --watch
 
 
-or even 
-
-port=8765 pm2 start index.js --watch
-
-and you can put this into package.json start section
+So you can override the PORT constant in server.js
 
 ===============
 
 don't forget about tests!
 
-
 ==============
 
 see routing
-
-and app methods chain
-
-

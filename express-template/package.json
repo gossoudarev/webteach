@@ -1,14 +1,14 @@
 {
   "name": "express-template",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "a tiny framework for an express app - jshint-ok",
   "main": "index.js",
   "engines": {
-    "node": "6.6.0"
+    "node": "7.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon"
   },
   "repository": {
     "type": "git",
