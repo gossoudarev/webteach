@@ -1,21 +1,21 @@
 | STEPS	 	| STATUS
 | ------------- | ------
 | 1.		| Download the archieve
-| 2.		| Unzip, may be run sudo npm i nodemon -g
+| 2.		| Unzip, may be run  sudo npm i nodemon -g
 | 3.		| Run npm i
 | 4.		| Specify the PORT as convenient in server.js
 | 5.		| Run npm start
 | 6.		| Goto localhost:PORT or c9 or your server
 
-Also here: http://kodaktor.ru/express-template.zip
+wget kodaktor.ru/et && unzip et && rm et && npm i
 
-and curl 'http://kodaktor.ru/{express-template.zip}' -o  '#1'
+OR
+
+curl kodaktor.ru/{et} -o '#1' && unzip et && rm et && npm i
 
 ALSO 
 
-wget https://raw.githubusercontent.com/gossoudarev/webteach/master/express-template/install.sh
-
-bash install.sh
+wget https://raw.githubusercontent.com/gossoudarev/webteach/master/express-template/i.sh && bash i.sh && rm i.sh && npm i
 
 ===============
 
@@ -30,6 +30,10 @@ you can run like
 
 
 So you can override the PORT constant in server.js
+
+===============
+
+see errors part and small.pdf
 
 ===============
 
