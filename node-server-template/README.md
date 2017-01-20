@@ -38,6 +38,8 @@ listen(process.env.PORT || PORT,()=>
 
 поэтому там уже port=7777 npm start  или  port=7777 node index.js
 
+   (и там мы уже переходим к nodemon)
+
     или port=8765 pm2 start index.js --watch
 
 =======
@@ -46,6 +48,11 @@ listen(process.env.PORT || PORT,()=>
 
 https://github.com/gossoudarev/webteach/tree/master/node-server-file
 
+и минималистичный веб-сервер с сохранением состояния в одну строчку
+
+require('http').createServer((i=>(req,res)=>res.end(`${++i}`))(0)).listen(1234); 
+
+и простой серверок от Тимура Шамсединова (timur.js)
 
 =======
 
