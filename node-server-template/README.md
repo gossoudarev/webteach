@@ -38,9 +38,7 @@ listen(process.env.PORT || PORT,()=>
 
 поэтому там уже port=7777 npm start  или  port=7777 node index.js
 
-   (и там мы уже переходим к nodemon)
-
-    или port=8765 pm2 start index.js --watch
+    (там  nodemon)
 
 =======
 
@@ -48,38 +46,36 @@ listen(process.env.PORT || PORT,()=>
 
 https://github.com/gossoudarev/webteach/tree/master/node-server-file
 
+=======
+
 и минималистичный веб-сервер с сохранением состояния в одну строчку
 
 require('http').createServer((i=>(req,res)=>res.end(`${++i}`))(0)).listen(1234); 
 
-и простой серверок от Тимура Шамсединова (timur.js)
+Можно воспользоваться моим образом для его быстрого запуска 
+
+https://hub.docker.com/r/igossoudarev/nodesimple/
+
+[docker pull igossoudarev/nodesimple]
+
+docker run -itd -p 1234:80 --name n1 igossoudarev/nodesimple
+
+docker exec -it n1 bash
+
+curl 192.168.99.100:1234
 
 =======
 
-если мы хотим видеть приложение изнутри докер-контейнера:
+и простой серверок от Тимура Шемсединова (timur.js)
 
-[docker pull yfix/phantomjs]
+=======
 
-docker run -itd -p YYYY:4444   --name fileserver   yfix/phantomjs
+изнутри контейнера можно забирать и другой код, естественно
 
 wget https://raw.githubusercontent.com/gossoudarev/webteach/master/node-server-file/index.js
-
-
-если внутри сервер будет работать на порту 4444
-
-то снаружи будет виден как localhost:YYYY
-
-если мы хотим устроить файл-сервер в локальную сеть,
-
-то проще всего -p 80:4444
-
-и тогда обращаясь просто по http://[ip]
-
-соседи будут видеть наш файл-сервер.
 
 
 
 см. также 
 
 https://github.com/HowProgrammingWorks/NodeServer
-
