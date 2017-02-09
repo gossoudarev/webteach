@@ -21,9 +21,9 @@ https://github.com/gossoudarev/webteach/tree/master/dz1
 
 Вместо того, чтобы скачивать весь репозиторий, вам нужно загрузить только эту папку в данном конкретном случае, 
 
-svn checkout https://github.com/gossoudarev/webteach/trunk/dz1
+`svn checkout https://github.com/gossoudarev/webteach/trunk/dz1`
 
-Как вы видите, фрагмент /tree/master/ был заменён на /trunk/
+Как вы видите, фрагмент `/tree/master/` был заменён на `/trunk/``
 
 Вы предоставляете выполненные задания аналогичным (симметричным) образом.
 
@@ -44,11 +44,11 @@ svn checkout https://github.com/gossoudarev/webteach/trunk/dz1
 
 Пример. Чтобы очень быстро запустить минималистичный веб-сервер на node.js, выполните
 
-docker pull igossoudarev/nodesimple
+`docker pull igossoudarev/nodesimple`
 
 Вы получите образ, по которому можно создать работающий контейнер:
 
-docker run --name n1 -p 5555:80 -d  igossoudarev/nodesimple
+`docker run --name n1 -p 5555:80 -d  igossoudarev/nodesimple`
 
 Далее вы можете посмотреть на работу приложения из контейнера в браузере: 
 
@@ -56,16 +56,18 @@ http://192.168.99.100:5555
 
 или
 
-curl 192.168.99.100:5555
+`curl 192.168.99.100:5555`
 
 И подключиться к оболочке командной строки внутри контейнера:
 
-docker exec -it n1 bash
+`docker exec -it n1 bash`
 
-. ~/.bash_profile
+После чего уже внутри контейнера выполнить:
 
-mc
+`. ~/.bash_profile`
 
-После чего модифицировать код файла server.js внутри, сохранять изменения
+`mc`
+
+Далее  модифицировать код файла server.js внутри, сохранять изменения
 
 и наблюдать за тем, как эти изменения влияют на работу приложения в браузере.
