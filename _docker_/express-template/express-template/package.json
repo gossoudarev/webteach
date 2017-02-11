@@ -1,0 +1,26 @@
+{
+  "name": "express-template",
+  "version": "4.0.0",
+  "description": "a tiny framework for an express app - jshint-ok",
+  "main": "index.js",
+  "engines": {
+    "node": "7.x.y"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/express-template"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "EliasGoss",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.13.4"
+  }
+}
