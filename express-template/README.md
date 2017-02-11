@@ -42,3 +42,9 @@ don't forget about tests!
 ==============
 
 see routing
+
+==============
+
+https://hub.docker.com/r/igossoudarev/express-template/
+
+the image and its instruction
