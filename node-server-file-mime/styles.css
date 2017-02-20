@@ -1,0 +1,22 @@
+   
+* {overflow: hidden}  
+body {background: #dee; margin: 20px 0px 0px 0px; }
+  h1 {background: linear-gradient(to top, rgb(250,255,255) 0%, rgba(255,255,255, 0.5) 100%);
+        padding: 10px; border-radius: 10px; font: 32px sans-serif;
+        box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);  width: 90%; margin: auto; text-align: center;
+        
+      }
+  code {background: white; font-size: 14px; padding: 2px;  }
+  #i {width: 250px}
+
+
+  div {font: 16px sans-serif; margin: 0px;  }
+  .m {margin-top: 20px;}
+  .f {display: flex; justify-content:  space-between; width: 91%; margin: auto}
+  .f a { flex-basis: 30em; text-align:center; background: white;
+      padding: 5px; border: 1px solid silver; border-radius: 10px; 
+      text-decoration: none
+   }
+  p {text-align: center; padding: 35px; ;width: 90%; margin: auto} 
+   
+
