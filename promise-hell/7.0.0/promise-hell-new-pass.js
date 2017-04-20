@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 /*jshint -W058 */
 /*jshint -W083 */
-const TEMPLATEJSON = './kramer_tests_set_new';
+const TEMPLATEJSON = './kramer_tests_set_client';
 
 let Zombie = require('zombie'),
     assert = require('assert'),
@@ -53,6 +53,6 @@ let  visitor = async function(){
     for (let query of  visits( jsncnt ) ){
   	  let result = await  query;
     }
-};
+}
 
 visitor();
