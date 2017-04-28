@@ -8,7 +8,7 @@ https://kodaktor.ru/gossrandom.js
 
 ====
 
-`npm i -S gossrandom`
+`npm i -S gossrandom` ИЛИ `yarn add gossrandom`
 
 и далее в коде:
 
