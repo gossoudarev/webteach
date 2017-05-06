@@ -1,14 +1,18 @@
 {
   "name": "timer_sample",
   "version": "1.0.0",
-  "description": "",
+  "description": "Timer promisified testing with mocha",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "start": "babel-node index.js --presets es2015,stage-2"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Goss",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/gossoudarev/webteach/tree/master/testing_promise"
+  },
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
