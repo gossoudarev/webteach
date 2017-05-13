@@ -1,0 +1,20 @@
+{
+  "name": "mocha_import",
+  "version": "1.0.0",
+  "description": "promisified testing with babelified mocha",
+  "main": "index.js",
+  "repository": "https://github.com/gossoudarev/webteach/tree/master/testing_promise/mocha_import",
+  "author": "GossJS",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "should": "^11.2.1"
+  },
+  "dependencies": {
+    "mongoose": "^4.9.8"
+  }
+}
