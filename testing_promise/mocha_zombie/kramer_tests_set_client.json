@@ -1,0 +1,21 @@
+{
+   "url" : "http://kodaktor.ru/g/testing_kramer",
+   "data" :[
+	   {"input": "?a1=-2&b1=4&c1=-22&a2=7&b2=-5&c2=50", "output":{"button":"clicked", "result":{
+           "x": 5,
+           "y": -3
+	   }}},
+
+	   {"input": "?a1=2&b1=-3&c1=-32&a2=-3&b2=2&c2=33", "output":{"button":"clicked", "result":{
+           "x": -7,
+           "y": 6
+	   }}},	   
+
+	   {"input": "?a1=2&b1=0&c1=-14&a2=-3&b2=2&c2=33", "output":{"button":"clicked", "result":{
+           "x": -7,
+           "y": 6
+	   }}}	   
+	
+   ]
+}
+
