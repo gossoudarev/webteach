@@ -1,0 +1,9 @@
+$col: seagreen;
+
+@mixin back-and-corners($color, $radius, $p:10px) {
+		  background-color: $color;
+          border-radius: $radius;
+      	  padding: $p;
+}
+
+.ui { @include back-and-corners(  lighten( $col, 15%)  , 10px); }

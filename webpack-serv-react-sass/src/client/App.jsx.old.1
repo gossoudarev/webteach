@@ -1,0 +1,22 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+//import DatePick from './Date';
+import DatePicker from 'material-ui/DatePicker';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+
+injectTapEventPlugin();
+
+const App = () => (
+  <MuiThemeProvider>
+        <div>
+          <DatePicker id="date" onChange={(n=null,date)=>alert(date)} 
+            hintText="Выберите дату начала работы" container="dialog" />
+        </div>
+    
+  </MuiThemeProvider>
+);
+
+export default App;
+
