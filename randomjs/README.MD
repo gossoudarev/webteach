@@ -14,6 +14,10 @@ https://kodaktor.ru/gossrandom.js
 
 `const Rand = require('gossrandom');`
 
+или
+
+`import Rand from 'gossrandom'`
+
 `console.log(Rand.interval());`
 
 
