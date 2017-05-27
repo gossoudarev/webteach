@@ -1,0 +1,28 @@
+{
+  "name": "material1",
+  "version": "1.0.0",
+  "description": "demonstrate material design react attempt 1",
+  "main": "./src/client/index.js",
+  "repository": "https://github.com/gossoudarev/webteach/tree/master/webpack-serv-react-sass",
+  "author": "Goss.JS",
+  "license": "MIT",
+  "dependencies": {
+    "gossrandom": "^1.0.0",
+    "material-ui": "^0.18.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "scripts": {
+    "build": "echo '<div id=\"root\"></div><script src=\"./dist/js/bundle.js\"></script>' > index.html",
+    "start": "webpack-dev-server --progress"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
