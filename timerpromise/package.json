@@ -1,0 +1,25 @@
+{
+  "name": "timerpromise",
+  "version": "1.0.0",
+  "description": "a simple sample module for testing promisified timer class",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "echo '{\"presets\": [\"env\"]}' > .babelrc",
+    "test": "mocha --compilers js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/timerpromise"
+  },
+  "keywords": [
+    "timer"
+  ],
+  "author": "GossJS",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.5.1",
+    "babel-register": "^6.24.1",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1"
+  }
+}
