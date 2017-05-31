@@ -1,0 +1,15 @@
+{
+  "name": "lines11es2015",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gossoudarev/webteach/tree/master/lines11",
+  "license": "MIT",
+  "scripts": {
+    "pretest": "echo '{\"presets\": [\"env\"]}' > .babelrc",
+    "start": "babel-node ."
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
+  }
+}

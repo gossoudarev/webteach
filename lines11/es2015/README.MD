@@ -1,0 +1,1 @@
+yarn run pretest && yarn install && yarn start
