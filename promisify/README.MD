@@ -1,0 +1,1 @@
+This tiny project demonstrates how you can wrap an callback-powered method with a Promise
