@@ -4,6 +4,10 @@
   "description": "does promisify in node 8.0.0 work?",
   "main": "index.js",
   "author": "GossJS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gossoudarev/webteach/tree/master/promisify"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.24.1",
