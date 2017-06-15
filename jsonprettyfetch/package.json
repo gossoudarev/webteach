@@ -1,0 +1,21 @@
+{
+  "name": "jsonprettyfetch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "GossJS",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "nodemon": "^1.11.0",
+    "prettyjson": "^1.2.1"
+  },
+  "scripts": {
+    "pretest": "echo '{\"presets\": [\"env\"]}' > .babelrc",
+    "start": "nodemon --exec babel-node ."
+  }
+  
+}
