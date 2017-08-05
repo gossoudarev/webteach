@@ -5,6 +5,8 @@ b) nodemon combined with babel
 
 see screencast
 
+https://kodaktor.ru/fetch
+
 mind error handling
 
 note that https://kodaktor.ru/json/c207cbd exists, is valid but NOT is public CORS
