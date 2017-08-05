@@ -1,0 +1,14 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "babel-node local demo",
+  "scripts": {
+    "start": "./node_modules/babel-cli/bin/babel-node.js ."
+  },
+  "author": "Goss.JS",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0"
+  }
+}
