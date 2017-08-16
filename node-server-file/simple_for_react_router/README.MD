@@ -4,6 +4,10 @@ then go to http://localhost:3456/
 
 =====
 
+svn checkout https://github.com/gossoudarev/webteach/trunk/node-server-file/simple_for_react_router
+
+=====
+
 Explanation:
 
 index.js is a simple server powered by node.
