@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "mocha --compilers js:babel-register"
+  },
+  "name": "testing_gmail_reg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "mocha": "^3.5.0",
+    "should": "^12.0.0",
+    "zombie": "^5.0.7"
+  }
+}

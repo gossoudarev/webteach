@@ -1,0 +1,8 @@
+[
+        {"value": "il@gmail.com", "expected": "no"},
+        {"value": "ilya@gmail.com", "expected": "yes"},
+        {"value": "elias@gmail.ru", "expected": "no"},
+        {"value": "il-ya@gmail.com", "expected": "no"},
+        {"value": "name#gmail.com", "expected": "no"},
+        {"value": "hahaha@gmail.com", "expected": "yes"}
+]
