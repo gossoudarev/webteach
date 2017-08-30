@@ -12,18 +12,3 @@ import testValues from './testValues';
      	  		.property('response', o.expected)
 			))
 })();
-
-
-
-
-/*
-
-jsncnt.data.forEach( query=> describe('#solve system', ()=> {
-  	    	    				it('respond with result', ()=>
-  	    	      		  			goURL(jsncnt.url+query.input).then(doClick).then(final).should.eventually.have
-  	    	           	  			.property('result', query.output.result)
-  	    	    				);
-  	   						 })
-  	   			   );
-
-*/
