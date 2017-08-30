@@ -1,6 +1,6 @@
 import Zombie from 'zombie';
 import testValues from './testValues';
-((URL = 'https://kodaktor.ru/g/testing_f38ac?gmail=')=>{
+((URL = 'https://kodaktor.ru/g/testing_f38ac?gmail=', SEL='h3#response')=>{
     const page = new Zombie();
     const goURL = url=> new Promise(resolve=>page.visit(url, resolve));
 
@@ -8,7 +8,7 @@ import testValues from './testValues';
 			it('returns no or yes from URL', ()=>{
 			  expect.assertions(1);
         return goURL(URL+o.value)
-               .then( ()=> expect( page.document.querySelector('h3#response').textContent  ).toBe(o.expected))
+               .then( ()=> expect( page.document.querySelector(SEL).textContent  ).toBe(o.expected))
       }
 		))
 })();
