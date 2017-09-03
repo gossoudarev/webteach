@@ -7,9 +7,13 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "^20.0.3",
     "babel-preset-env": "^1.6.0",
     "jest": "^20.0.4",
     "zombie": "^5.0.7"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
   }
 }

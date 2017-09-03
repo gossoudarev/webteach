@@ -5,3 +5,7 @@ cd testing_gmail_reg
 yarn install
 
 yarn test
+
+
+
+and also ./node_modules/babel-cli/bin/babel-node.js runtest.js

@@ -16,9 +16,9 @@ export default function (res,SCRIPT_URL = 'https://kodaktor.ru/g/testing_f38ac',
         ;
 				try {
 							const got = page.document.querySelector(SEL).textContent,
-									  exp = o.expected,
+									  exp = o.value,
 									  sign = (got==exp) ? '\u2714' : '-';
-							outlog(  `${ sign }   got |${ got.padEnd(3) }|,  expected |${exp.padEnd(3)}| `   );
+							outlog(  `${ sign }   got |${ got.padEnd(22) }|,  expected |${exp.padEnd(22)}| `   );
 						} catch (e) {
 							return res.send('Could NOT retrieve the wanted value!');
 						}
