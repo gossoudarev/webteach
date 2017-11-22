@@ -43,5 +43,5 @@ function PermutationsWithRepetition(src, len){
 }
 
 
-var perms = PermutationsWithRepetition([0,1], 4);
-perms.each(function(v){ console.log(v); });
+PermutationsWithRepetition([0,1], 4).each(v=>console.log(v));
+PermutationsWithRepetition(['a','b','c'], 3).each(v=>console.log(v));
