@@ -1,3 +1,7 @@
+https://stepik.org/course/91/syllabus
+
+
+
 https://math.stackexchange.com/questions/13841/online-tool-for-making-graphs-vertices-and-edges
 
 https://github.com/lukaszkostrzewa/graphy
