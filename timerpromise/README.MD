@@ -1,3 +1,8 @@
+теперь здесь: https://github.com/GossJS/webteach/tree/master/timerpromise
+
+---
+
+
 `npm i && npm run pretest && npm test`
 ```JavaScript
   import Timer from 'timerpromise'
